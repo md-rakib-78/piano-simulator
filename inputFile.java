@@ -1,5 +1,4 @@
 import javax.swing.*;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,16 +7,17 @@ import java.awt.*;
 
 public class inputFile extends PianoBoard {
 
-    public inputFile() {
+    public inputFile(ArrayList<String> str) {
         super();
 
         in.setIcon(pressedIcon47);
 
-        String filePath = chooseFileAndGetPath();
-        if (filePath != null) {
-            System.out.println("Selected File Path: " + filePath);
-            ArrayList<String> words = readWordsFromFile(filePath);
-            System.out.println("Words in file:");
+       // String filePath = chooseFileAndGetPath();
+        //if (filePath != null) {
+           // System.out.println("Selected File Path: " + filePath);
+            //ArrayList<String> words = readWordsFromFile(filePath);
+           // System.out.println("Words in file:");
+           ArrayList<String> words= str;
             for (String word : words) {
                 System.out.println(word);
             }
@@ -30,9 +30,9 @@ public class inputFile extends PianoBoard {
 
                     String s = words.get(i);
 
-                    if (s.equals(" ")) {
+                    if (s.equals(".")) {
                         try {
-                            Thread.sleep(200);
+                            Thread.sleep(500);
                         } catch (Exception e) {
 
                         }
@@ -78,40 +78,41 @@ public class inputFile extends PianoBoard {
                     transparentPanel.remove(label1);
                 }
 
-                label1 = new JLabel(s, SwingConstants.CENTER);
-                label1.setForeground(Color.WHITE);
-                label1.setFont(new Font("Arial", Font.PLAIN, 25));
-                transparentPanel.revalidate();
-                transparentPanel.repaint();
-                transparentPanel.add(label1);
+        //         label1 = new JLabel(s, SwingConstants.CENTER);
+        //         label1.setForeground(Color.WHITE);
+        //         label1.setFont(new Font("Jokerman", Font.PLAIN, 25));
+        //         transparentPanel.revalidate();
+        //         transparentPanel.repaint();
+        //         transparentPanel.add(label1);
 
-            } else {
-                String s2="The file is empty.";
-                if (label1 != null) {
-                    transparentPanel.remove(label1);
-                }
+        //     } else {
+        //         String s2="The file is empty.";
+        //         if (label1 != null) {
+        //             transparentPanel.remove(label1);
+        //         }
 
-                label1 = new JLabel(s2, SwingConstants.CENTER);
-                label1.setForeground(Color.WHITE);
-                label1.setFont(new Font("Arial", Font.PLAIN, 25));
-                transparentPanel.revalidate();
-                transparentPanel.repaint();
-                transparentPanel.add(label1);
-            }
-        } else {
-            String s="No file selected.";
-            if (label1 != null) {
-                transparentPanel.remove(label1);
-            }
+        //         label1 = new JLabel(s2, SwingConstants.CENTER);
+        //         label1.setForeground(Color.WHITE);
+        //         label1.setFont(new Font("Jokerman", Font.PLAIN, 25));
+        //         transparentPanel.revalidate();
+        //         transparentPanel.repaint();
+        //         transparentPanel.add(label1);
+        //     }
+        // } else {
+        //     String s="No file selected.";
+        //     if (label1 != null) {
+        //         transparentPanel.remove(label1);
+        //     }
 
-            label1 = new JLabel(s, SwingConstants.CENTER);
-            label1.setForeground(Color.WHITE);
-            label1.setFont(new Font("Arial", Font.PLAIN, 25));
-            transparentPanel.revalidate();
-            transparentPanel.repaint();
-            transparentPanel.add(label1);
-        }
+        //     label1 = new JLabel(s, SwingConstants.CENTER);
+        //     label1.setForeground(Color.WHITE);
+        //     label1.setFont(new Font("Jokerman", Font.PLAIN, 25));
+        //     transparentPanel.revalidate();
+        //     transparentPanel.repaint();
+        //     transparentPanel.add(label1);
+        // }
     }
+}
 
     public String chooseFileAndGetPath() {
         try {

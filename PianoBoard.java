@@ -2003,8 +2003,10 @@ mu.getActionMap().put("ctrlM", new AbstractAction() {
             @Override
             public void mouseReleased(MouseEvent e) {
                 in.setIcon(icon47);
-                new inputFile();
-                setVisible(false);
+                //new inputFile();
+                
+                setVisible(true);
+                new AI_prompt();
             }
         });
 
@@ -2012,7 +2014,7 @@ mu.getActionMap().put("ctrlM", new AbstractAction() {
                 KeyStroke.getKeyStroke(KeyEvent.VK_I, InputEvent.CTRL_DOWN_MASK), "ctrlI");
         in.getActionMap().put("ctrlI", new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
-                new inputFile();
+                //new inputFile();
                 setVisible(false);
             }
         });
@@ -2056,7 +2058,7 @@ public void actionPerformed(ActionEvent e) {
 
   // // // Method to play .wav sound
   public static void playSound(String filename) {
-        new Thread(() -> {
+
             try {
                 File audioFile = new File("sound/Set 1/" + filename);
                 if (!audioFile.exists()) return;
@@ -2075,14 +2077,13 @@ public void actionPerformed(ActionEvent e) {
             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                 ex.printStackTrace();
             }
-        }).start();
+        
     }
 
 
 
    // // // Method to play .wav sound 1
   public static void playSound1(String filename) {
-        new Thread(() -> {
             try {
                 File audioFile = new File("sound/Set 2 #/" + filename);
                 if (!audioFile.exists()) return;
@@ -2101,7 +2102,6 @@ public void actionPerformed(ActionEvent e) {
             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                 ex.printStackTrace();
             }
-        }).start();
-    }
+  }
 
 }

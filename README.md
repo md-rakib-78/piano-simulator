@@ -24,7 +24,7 @@ A feature-rich virtual piano desktop application built with **Java Swing**, offe
 2. Menu ![](UserInterface/menu.png)
 3. Piano Board ![](UserInterface/piano_board.png)
 4. Key Button ![](UserInterface/key_button.png)
-5. Volume Button ![](UserInterface/sound_button.png)
+5. Volume Button <br> ![](UserInterface/sound_button.png)
 6. Music Button ![](UserInterface/music_button.png)
 7. Recording Button ![](UserInterface/record_button.png)
 

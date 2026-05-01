@@ -1,24 +1,34 @@
-# 🎹 RTP Piano — Virtual Piano Application
+# RTP Piano — Virtual Piano Application
 
 A feature-rich virtual piano desktop application built with **Java Swing**, offering an interactive piano board, AI-powered melody generation, audio recording, and a built-in music player.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🎹 **Interactive Piano Board** — Play piano notes across multiple octaves (F2 to E5) using on-screen buttons, with both natural keys and sharp (#) keys supported.
-- 🤖 **AI Melody Generator** — Enter a prompt, choose an emotion and duration, and let the AI generate a realistic piano sequence for you using the Anthropic Claude API.
-- 🎵 **Music Player** — Load and play your own MP3/audio files with play, pause, skip, volume control, and a track timer.
-- 🔴 **Screen/Audio Recorder** — Record your piano sessions directly using FFmpeg (WASAPI-based), with pause/resume support and automatic file merging.
-- 🔊 **Volume Control** — Adjustable volume slider for the piano sounds.
-- ⌨️ **Keyboard Shortcut Guide** — Visual overlay showing all key mappings for quick reference.
-- 🖥️ **Splash Screen** — Stylish loading screen on startup.
-- 📋 **About Page** — App info and creator details.
-- 🎨 **Custom UI** — Fully custom-designed interface with gradient panels, icon buttons, and adaptive screen sizing.
+-  **Interactive Piano Board** — Play piano notes across multiple octaves (F2 to E5) using on-screen buttons, with both natural keys and sharp (#) keys supported.
+-  **AI Melody Generator** — Enter a prompt, choose an emotion and duration, and let the AI generate a realistic piano sequence for you using the Anthropic Claude API.
+-  **Music Player** — Load and play your own MP3/audio files with play, pause, skip, volume control, and a track timer.
+-  **Screen/Audio Recorder** — Record your piano sessions directly using FFmpeg (WASAPI-based), with pause/resume support and automatic file merging.
+-  **Volume Control** — Adjustable volume slider for the piano sounds.
+-  **Keyboard Shortcut Guide** — Visual overlay showing all key mappings for quick reference.
+-  **Splash Screen** — Stylish loading screen on startup.
+-  **About Page** — App info and creator details.
+-  **Custom UI** — Fully custom-designed interface with gradient panels, icon buttons, and adaptive screen sizing.
 
 ---
 
-## 🛠️ Tech Stack
+## User Interface
+
+1. Splash screen <br> ![](UserInterface/splash_screen.png)
+2. Menu ![](UserInterface/menu.png)
+3. Piano Board ![](UserInterface/piano_board.png)
+4. Key Button ![](UserInterface/key_button.png)
+5. Volume Button ![](UserInterface/sound_button.png)
+6. Music Button ![](UserInterface/music_button.png)
+7. Recording Button ![](UserInterface/record_button.png)
+
+##  Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -31,7 +41,7 @@ A feature-rich virtual piano desktop application built with **Java Swing**, offe
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 vartual piano/
@@ -64,7 +74,7 @@ vartual piano/
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - **Java JDK 11 or higher** (with `java.net.http` support)
 - **Windows OS** (recording uses WASAPI — Windows Audio Session API)
@@ -73,40 +83,7 @@ vartual piano/
 
 ---
 
-## 🚀 How to Run
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/vartual-piano.git
-   cd "vartual piano"
-   ```
-
-2. **Compile all Java files** (include the jars in the classpath):
-   ```bash
-   javac -cp ".;jar file/*" *.java
-   ```
-
-3. **Run the application:**
-   ```bash
-   java -cp ".;jar file/*" Splash
-   ```
-
-> 💡 On Linux/macOS, replace `;` with `:` in the classpath.
-
----
-
-## 🤖 AI Melody Generation
-
-The AI feature connects to the **Anthropic Claude API** to generate piano sequences based on your chosen emotion and duration.
-
-To use it:
-1. Get your API key from [Anthropic](https://www.anthropic.com)
-2. Add your API key inside `PianoSequenceGenerator.java`
-3. Open the AI panel from the piano board, type a prompt, select emotion and duration, then hit **Generate**
-
----
-
-## 🎮 Piano Key Range
+##  Piano Key Range
 
 The piano covers **4 octaves** of keys:
 
@@ -119,14 +96,12 @@ C5  C#5  D5  D#5  E5
 
 ---
 
-## 👨‍💻 Creator
-
+## Creator
 **Md Rakibul Islam**  
 BSc in Computer Science & Engineering  
 Version: rtp(1.0) | 64-bit (win64) | April 2025
 
 ---
 
-## 📄 License
-
+## License
 This project is for educational and personal use. FFmpeg is included under its own [LGPL/GPL license](https://ffmpeg.org/legal.html).
